@@ -36,4 +36,6 @@ GithubSponsors::fromOrganization('Astrotomic')->all(); // all sponsors for given
 GithubSponsors::fromViewer()->cursor(); // lazy collection - using less memory
 
 GithubSponsors::fromViewer()->select('login', 'name', 'avatarUrl')->all(); // select specific attributes
+
+GithubSponsors::fromViewer()->isSponsor('Gummibeer'); // check if someone is a sponsor
 ```

@@ -11,6 +11,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Fluent;
 use Illuminate\Support\LazyCollection;
+use Illuminate\Support\Str;
 
 class GithubSponsors
 {
@@ -64,6 +65,14 @@ class GithubSponsors
     public function all(): Collection
     {
         return $this->cursor()->collect();
+    }
+
+    public function isSponsor(string $login): bool
+    {
+        return $this
+            ->select('login')
+            ->cursor()
+            ->contains(fn(Fluent $sponsor): bool => $sponsor->login === $login);
     }
 
     public function cursor(): LazyCollection

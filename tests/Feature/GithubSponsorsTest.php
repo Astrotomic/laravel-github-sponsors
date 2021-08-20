@@ -61,3 +61,19 @@ it('retrieves sponsors lazyly')
             ->__typename->toBeString()->toBeIn(['User', 'Organization'])
             ->login->toBeString();
     });
+
+it('checks if someone is a sponsor')
+    ->expect(fn() => GithubSponsors::fromOrganization('larabelles')->isSponsor('Gummibeer'))
+    ->toBeTrue();
+
+it('checks if someone is a sponsor is casesensitive')
+    ->expect(fn() => GithubSponsors::fromOrganization('larabelles')->isSponsor('gummibeer'))
+    ->toBeFalse();
+
+it('checks if someone is not a sponsor')
+    ->expect(fn() => GithubSponsors::fromViewer()->isSponsor('Gummibeer'))
+    ->toBeFalse();
+
+it('checks if an organization is a sponsor')
+    ->expect(fn() => GithubSponsors::fromViewer()->isSponsor('spatie'))
+    ->toBeTrue();
