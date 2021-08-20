@@ -1,0 +1,52 @@
+{
+    "name": "astrotomic/laravel-github-sponsors",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Witkowski",
+            "email": "gummibeer@astrotomic.info",
+            "homepage": "https://astrotomic.info",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
+        "astrotomic/graphql-query-builder": "^0.1.0",
+        "guzzlehttp/guzzle": "^6.5.5 || ^7.0.1",
+        "illuminate/http": "^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0 || ^6.0",
+        "pestphp/pest": "^v1.15.0",
+        "pestphp/pest-plugin-laravel": "^1.1"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "composer-normalize": {
+            "indent-size": 4,
+            "indent-style": "space"
+        },
+        "laravel": {
+            "providers": [
+                "Astrotomic\\GithubSponsors\\GithubSponsorsServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Astrotomic\\GithubSponsors\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
