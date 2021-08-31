@@ -2,6 +2,7 @@
 
 namespace Astrotomic\GithubSponsors;
 
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\ServiceProvider;
 
 class GithubSponsorsServiceProvider extends ServiceProvider
@@ -11,7 +12,9 @@ class GithubSponsorsServiceProvider extends ServiceProvider
         $this->app->singleton(Graphql::class);
         $this->app->when(Graphql::class)
             ->needs('$token')
-            ->giveConfig('services.github.sponsors_token');
+            ->give(static function (Container $container): string {
+                return $container->get('config')->get('services.github.sponsors_token');
+            });
 
         $this->app->singleton(Factory::class);
     }

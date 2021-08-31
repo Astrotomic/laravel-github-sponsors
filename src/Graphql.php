@@ -20,7 +20,7 @@ class Graphql
         $response = Http::baseUrl('https://api.github.com')
             ->asJson()
             ->accept('application/vnd.github.v4+json')
-            ->withUserAgent('astrotomic/laravel-github-sponsors')
+            ->withHeaders(['User-Agent' => 'astrotomic/laravel-github-sponsors'])
             ->withOptions(['http_errors' => true])
             ->withToken($this->token)
             ->post('/graphql', [
