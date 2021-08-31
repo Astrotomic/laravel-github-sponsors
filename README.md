@@ -1,9 +1,12 @@
 # Laravel GitHub Sponsors
 
+[![MIT License](https://img.shields.io/github/license/Astrotomic/laravel-github-sponsors.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/laravel-github-sponsors/blob/main/LICENSE.md)
 [![Latest Version](http://img.shields.io/packagist/v/astrotomic/laravel-github-sponsors.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/astrotomic/laravel-github-sponsors)
-[![MIT License](https://img.shields.io/github/license/Astrotomic/laravel-github-sponsors.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/laravel-github-sponsors/blob/master/LICENSE)
-[![Offset Earth](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-green?style=for-the-badge)](https://forest.astrotomic.info)
+[![PHP](https://img.shields.io/packagist/php-v/astrotomic/laravel-github-sponsors?color=%238892BE&style=for-the-badge)](https://github.com/Astrotomic/laravel-github-sponsors/blob/main/composer.json)
+
+[![Ecologi](https://img.shields.io/ecologi/trees/astrotomic?color=green&label=Treeware&style=for-the-badge)](https://forest.astrotomic.info)
 [![Larabelles](https://img.shields.io/badge/Larabelles-%F0%9F%A6%84-lightpink?style=for-the-badge)](https://larabelles.com)
+[![opendor.me](https://img.shields.io/badge/opendor.me-%F0%9F%9A%80-ff4297?style=for-the-badge)](https://opendor.me)
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Astrotomic/laravel-github-sponsors/pest?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/Astrotomic/laravel-github-sponsors/actions?query=workflow%3Apest)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Astrotomic/laravel-github-sponsors/phpcs?style=flat-square&logoColor=white&logo=github&label=PHP+CS)](https://github.com/Astrotomic/laravel-github-sponsors/actions?query=workflow%3Aphpcs)
