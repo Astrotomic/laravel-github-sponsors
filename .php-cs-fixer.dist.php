@@ -2,12 +2,6 @@
 
 $finder = (new \PhpCsFixer\Finder)
     ->notPath('vendor')
-    ->notPath('bootstrap')
-    ->notPath('storage')
-    ->notName('*.blade.php')
-    ->notName('index.php')
-    ->notName('server.php')
-    ->notName('_ide_helper.php')
     ->ignoreDotFiles(true)
     ->ignoreVCS(true)
     ->name('*.php')

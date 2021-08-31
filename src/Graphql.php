@@ -40,7 +40,7 @@ class Graphql
     {
         $filepath = __DIR__."/../queries/{$group}/{$name}.graphql";
 
-        if(!file_exists($filepath)) {
+        if (! file_exists($filepath)) {
             throw new OutOfRangeException();
         }
 

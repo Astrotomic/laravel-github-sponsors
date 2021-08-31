@@ -2,7 +2,6 @@
 
 namespace Astrotomic\GithubSponsors;
 
-use Astrotomic\GithubSponsors\Graphql;
 use Illuminate\Support\ServiceProvider;
 
 class GithubSponsorsServiceProvider extends ServiceProvider
