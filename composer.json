@@ -13,12 +13,12 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "ext-json": "*",
-        "astrotomic/graphql-query-builder": "^0.1.0",
         "guzzlehttp/guzzle": "^6.5.5 || ^7.0.1",
-        "illuminate/http": "^8.0",
-        "illuminate/support": "^8.0"
+        "illuminate/http": "^7.0 || ^8.0",
+        "illuminate/support": "^7.0 || ^8.0"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
         "orchestra/testbench": "^5.0 || ^6.0",
         "pestphp/pest": "^v1.15.0",
         "pestphp/pest-plugin-laravel": "^1.1"
@@ -48,5 +48,8 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "scripts": {
+        "fix": "vendor/bin/php-cs-fixer fix --using-cache=no"
+    }
 }

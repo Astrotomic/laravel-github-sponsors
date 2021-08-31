@@ -1,0 +1,14 @@
+query (
+    $account: String!
+) {
+    user(login: $account) {
+        sponsorshipsAsMaintainer {
+            totalCount
+        }
+    }
+    organization(login: $account) {
+        sponsorshipsAsMaintainer {
+            totalCount
+        }
+    }
+}

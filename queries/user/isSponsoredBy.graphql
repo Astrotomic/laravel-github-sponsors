@@ -1,0 +1,8 @@
+query (
+    $account: String!
+    $sponsor: String!
+) {
+    user(login: $account) {
+        isSponsoredBy(accountLogin: $sponsor)
+    }
+}

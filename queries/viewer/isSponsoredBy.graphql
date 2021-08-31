@@ -1,0 +1,10 @@
+query (
+    $sponsor: String!
+) {
+    user(login: $sponsor) {
+        isSponsoringViewer
+    }
+    organization(login: $sponsor) {
+        isSponsoringViewer
+    }
+}

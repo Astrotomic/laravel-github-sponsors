@@ -1,0 +1,23 @@
+query (
+    $cursor: String
+) {
+    viewer {
+        sponsorshipsAsMaintainer(first: 100, after: $cursor) {
+            pageInfo {
+                hasNextPage
+                endCursor
+            }
+            nodes {
+                sponsorEntity {
+                    __typename
+                    ... on User {
+                        user_fields
+                    }
+                    ... on Organization {
+                        organization_fields
+                    }
+                }
+            }
+        }
+    }
+}

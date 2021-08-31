@@ -1,0 +1,44 @@
+query (
+    $account: String!
+    $userCursor: String
+    $organizationCursor: String
+) {
+    user(login: $account) {
+        sponsorshipsAsMaintainer(first: 100, after: $userCursor) {
+            pageInfo {
+                hasNextPage
+                endCursor
+            }
+            nodes {
+                sponsorEntity {
+                    __typename
+                    ... on User {
+                        user_fields
+                    }
+                    ... on Organization {
+                        organization_fields
+                    }
+                }
+            }
+        }
+    }
+    organization(login: $account) {
+        sponsorshipsAsMaintainer(first: 100, after: $organizationCursor) {
+            pageInfo {
+                hasNextPage
+                endCursor
+            }
+            nodes {
+                sponsorEntity {
+                    __typename
+                    ... on User {
+                        user_fields
+                    }
+                    ... on Organization {
+                        organization_fields
+                    }
+                }
+            }
+        }
+    }
+}
