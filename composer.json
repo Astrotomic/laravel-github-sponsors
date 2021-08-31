@@ -19,8 +19,8 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
-        "orchestra/testbench": "^5.0 || ^6.0",
-        "pestphp/pest": "^v1.15.0",
+        "orchestra/testbench": "^5.9 || ^6.6",
+        "pestphp/pest": "^v1.18.0",
         "pestphp/pest-plugin-laravel": "^1.1"
     },
     "config": {
