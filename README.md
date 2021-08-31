@@ -58,3 +58,30 @@ GithubSponsors::viewer()->hasSponsors();
 // check how many sponsors the viewer has
 GithubSponsors::viewer()->sponsorsCount();
 ```
+
+## Contributing
+
+Please see [CONTRIBUTING](https://github.com/Astrotomic/.github/blob/master/CONTRIBUTING.md) for details. You could also be interested in [CODE OF CONDUCT](https://github.com/Astrotomic/.github/blob/master/CODE_OF_CONDUCT.md).
+
+### Security
+
+If you discover any security related issues, please check [SECURITY](https://github.com/Astrotomic/.github/blob/master/SECURITY.md) for steps to report it.
+
+## Credits
+
+- [Tom Witkowski](https://github.com/Gummibeer)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+## Treeware
+
+You're free to use this package, but if it makes it to your production environment I would highly appreciate you buying the world a tree.
+
+It’s now common knowledge that one of the best tools to tackle the climate crisis and keep our temperatures from rising above 1.5C is to [plant trees](https://www.bbc.co.uk/news/science-environment-48870920). If you contribute to my forest you’ll be creating employment for local families and restoring wildlife habitats.
+
+You can buy trees at [ecologi.com/astrotomic](https://forest.astrotomic.info)
+
+Read more about Treeware at [treeware.earth](https://treeware.earth)
