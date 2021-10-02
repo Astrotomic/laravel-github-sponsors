@@ -48,6 +48,15 @@ class User implements Client
         return $result['user']['sponsorshipsAsMaintainer']['totalCount'];
     }
 
+    public function hasSponsoringEnabled(): bool
+    {
+        $result = $this->graphql->send('user', 'hasSponsoringEnabled', [
+            'account' => $this->login,
+        ]);
+
+        return $result['user']['hasSponsorsListing'];
+    }
+
     public function hasSponsors(): bool
     {
         return $this->sponsorsCount() > 0;

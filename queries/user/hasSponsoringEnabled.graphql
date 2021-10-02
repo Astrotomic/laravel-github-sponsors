@@ -1,0 +1,7 @@
+query (
+    $account: String!
+) {
+    user(login: $account) {
+        hasSponsorsListing
+    }
+}
