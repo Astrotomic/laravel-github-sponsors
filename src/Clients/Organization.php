@@ -83,6 +83,4 @@ class Organization implements Client
             } while ($hasNextPage && $cursor);
         });
     }
-
-
 }
