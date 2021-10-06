@@ -48,6 +48,11 @@ class User implements Client
         return $result['user']['sponsorshipsAsMaintainer']['totalCount'];
     }
 
+    public function hasSponsors(): bool
+    {
+        return $this->sponsorsCount() > 0;
+    }
+
     public function hasSponsoringEnabled(): bool
     {
         $result = $this->graphql->send('user', 'hasSponsoringEnabled', [
@@ -55,11 +60,6 @@ class User implements Client
         ]);
 
         return $result['user']['hasSponsorsListing'];
-    }
-
-    public function hasSponsors(): bool
-    {
-        return $this->sponsorsCount() > 0;
     }
 
     public function sponsors(array $fields = ['login'], array $userFields = [], array $organizationFields = []): LazyCollection

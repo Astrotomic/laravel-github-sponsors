@@ -55,6 +55,16 @@ class Login implements Client
         return $this->sponsorsCount() > 0;
     }
 
+    public function hasSponsoringEnabled(): bool
+    {
+        $result = $this->graphql->send('login', 'hasSponsoringEnabled', [
+            'account' => $this->login,
+        ]);
+
+        return $result['user']['hasSponsorsListing']
+            ?? $result['organization']['hasSponsorsListing'];
+    }
+
     public function sponsors(array $fields = ['login'], array $userFields = [], array $organizationFields = []): LazyCollection
     {
         return LazyCollection::make(function () use ($fields, $userFields, $organizationFields): Generator {
