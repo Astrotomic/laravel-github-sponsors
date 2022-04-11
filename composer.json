@@ -19,11 +19,26 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
-        "orchestra/testbench": "^5.9 || ^6.6",
+        "orchestra/testbench": "^5.0 || ^6.0 || ^7.0",
         "pestphp/pest": "^v1.18.0",
         "pestphp/pest-plugin-laravel": "^1.1"
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Astrotomic\\GithubSponsors\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
         "sort-packages": true
     },
     "extra": {
@@ -37,18 +52,6 @@
             ]
         }
     },
-    "autoload": {
-        "psr-4": {
-            "Astrotomic\\GithubSponsors\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "scripts": {
         "fix": "vendor/bin/php-cs-fixer fix --using-cache=no"
     }
