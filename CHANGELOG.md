@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-github-sponsors` will be documented in this file
 
+## v0.4.0 - 2022-04-11
+
+- Laravel 9 support - [#3](https://github.com/Astrotomic/laravel-github-sponsors/pull/3)
+
 ## v0.3.0 - 2021-08-31
 
 - full rewrite
