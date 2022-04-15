@@ -102,3 +102,19 @@ it('checks if someone is not a sponsor')
 it('checks if an organization is a sponsor')
     ->expect(fn () => GithubSponsors::viewer()->isSponsoredBy('spatie'))
     ->toBeTrue();
+
+it('checks if given login has sponsoring enabled')
+    ->expect(fn () => GithubSponsors::login('larabelles')->hasSponsoringEnabled())
+    ->toBeTrue();
+
+it('checks if given viewer has sponsoring enabled')
+    ->expect(fn () => GithubSponsors::viewer()->hasSponsoringEnabled())
+    ->toBeTrue();
+
+it('checks if someone has sponsoring enabled')
+    ->expect(fn () => GithubSponsors::user('Gummibeer')->hasSponsoringEnabled())
+    ->toBeTrue();
+
+it('checks if an organization has sponsoring enabled')
+    ->expect(fn () => GithubSponsors::organization('larabelles')->hasSponsoringEnabled())
+    ->toBeTrue();

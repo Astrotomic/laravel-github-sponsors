@@ -1,0 +1,10 @@
+query (
+    $account: String!
+) {
+    user(login: $account) {
+        hasSponsorsListing
+    }
+    organization(login: $account) {
+        hasSponsorsListing
+    }
+}
