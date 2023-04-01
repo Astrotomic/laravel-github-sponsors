@@ -28,7 +28,7 @@ jobs:
                       pest: ^1.18
         timeout-minutes: 5
         env:
-            GITHUB_SPONSORS_TOKEN: ${{ secrets.GH_SPONSORS_TOKEN }}
+            GITHUB_SPONSORS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.dependency-version }}
 
