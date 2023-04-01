@@ -8,8 +8,8 @@
 [![Larabelles](https://img.shields.io/badge/Larabelles-%F0%9F%A6%84-lightpink?style=for-the-badge)](https://larabelles.com)
 [![opendor.me](https://img.shields.io/badge/opendor.me-%F0%9F%9A%80-ff4297?style=for-the-badge)](https://opendor.me)
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Astrotomic/laravel-github-sponsors/pest?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/Astrotomic/laravel-github-sponsors/actions?query=workflow%3Apest)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Astrotomic/laravel-github-sponsors/phpcs?style=flat-square&logoColor=white&logo=github&label=PHP+CS)](https://github.com/Astrotomic/laravel-github-sponsors/actions?query=workflow%3Aphpcs)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Astrotomic/laravel-github-sponsors/pest.yml?branch=main&style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/Astrotomic/laravel-github-sponsors/actions?query=workflow%3Apest)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Astrotomic/laravel-github-sponsors/phpcs.yml?branch=main&style=flat-square&logoColor=white&logo=github&label=PHP+CS)](https://github.com/Astrotomic/laravel-github-sponsors/actions?query=workflow%3Aphpcs)
 [![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/laravel-github-sponsors.svg?label=Downloads&style=flat-square)](https://packagist.org/packages/astrotomic/laravel-github-sponsors)
 
 Retrieve the GitHub Sponsors of any user/organization and check if someone is sponsoring you.
