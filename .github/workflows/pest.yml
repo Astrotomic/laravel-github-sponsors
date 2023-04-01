@@ -20,12 +20,16 @@ jobs:
                 include:
                     - laravel: 10.*
                       testbench: ^8.0
+                      pest: ^1.0
                     - laravel: 9.*
                       testbench: ^7.0
+                      pest: ^1.0
                     - laravel: 8.*
                       testbench: ^6.0
+                      pest: ^1.0
                     - laravel: 7.*
                       testbench: ^5.0
+                      pest: ^1.0
         timeout-minutes: 5
         env:
             GITHUB_SPONSORS_TOKEN: ${{ secrets.GH_SPONSORS_TOKEN }}
@@ -41,10 +45,11 @@ jobs:
               with:
                   php-version: ${{ matrix.php }}
                   extensions: dom, curl, mbstring, zip, pcntl, intl
+                  coverage: none
 
             - name: Install Dependencies
               run: |
-                  composer require --dev "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
+                  composer require --dev "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" "pestphp/pest:${{ matrix.pest }}" "pestphp/pest-plugin-laravel:${{ matrix.pest }}" --no-interaction --no-update
                   composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction
 
             - name: Execute Tests
