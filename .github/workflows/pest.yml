@@ -2,7 +2,8 @@ name: pest
 
 on:
     push:
-
+    pull_request:
+      types: [ ready_for_review, synchronize, opened ]
 jobs:
     pest:
         runs-on: ubuntu-latest
