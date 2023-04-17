@@ -77,6 +77,7 @@ If you discover any security related issues, please check [SECURITY](https://git
 ## Credits
 
 - [Tom Witkowski](https://github.com/Gummibeer)
+- [Mert Aşan](https://github.com/mertasan)
 - [All Contributors](../../contributors)
 
 ## License
