@@ -10,6 +10,7 @@ use Illuminate\Support\LazyCollection;
 class Login implements Client
 {
     protected string $login;
+
     protected Graphql $graphql;
 
     public function __construct(string $login, Graphql $graphql)

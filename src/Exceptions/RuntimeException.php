@@ -2,6 +2,4 @@
 
 namespace Astrotomic\GithubSponsors\Exceptions;
 
-abstract class RuntimeException extends \RuntimeException
-{
-}
+abstract class RuntimeException extends \RuntimeException {}

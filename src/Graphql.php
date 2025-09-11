@@ -41,7 +41,7 @@ class Graphql
         $filepath = __DIR__."/../queries/{$group}/{$name}.graphql";
 
         if (! file_exists($filepath)) {
-            throw new OutOfRangeException();
+            throw new OutOfRangeException;
         }
 
         $query = file_get_contents($filepath);
