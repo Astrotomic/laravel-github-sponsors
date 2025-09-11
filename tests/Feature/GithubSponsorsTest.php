@@ -92,7 +92,7 @@ it('checks if someone is a sponsor of an user')
     ->toBeTrue();
 
 it('checks if someone is a sponsor of an organization')
-    ->expect(fn () => GithubSponsors::organization('larabelles')->isSponsoredBy('taylorotwell'))
+    ->expect(fn () => GithubSponsors::organization('larabelles')->isSponsoredBy('laravel'))
     ->toBeTrue();
 
 it('checks if someone is a sponsor of a given login', function () {
