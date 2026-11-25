@@ -2,20 +2,25 @@
 
 namespace Astrotomic\GithubSponsors\Facades;
 
+use Astrotomic\GithubSponsors\Clients\Login;
+use Astrotomic\GithubSponsors\Clients\Organization;
+use Astrotomic\GithubSponsors\Clients\User;
+use Astrotomic\GithubSponsors\Clients\Viewer;
+use Astrotomic\GithubSponsors\Factory;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static \Astrotomic\GithubSponsors\Clients\Viewer viewer()
- * @method static \Astrotomic\GithubSponsors\Clients\Login login(string $login)
- * @method static \Astrotomic\GithubSponsors\Clients\User user(string $login)
- * @method static \Astrotomic\GithubSponsors\Clients\Organization organization(string $login)
+ * @method static Viewer viewer()
+ * @method static Login login(string $login)
+ * @method static User user(string $login)
+ * @method static Organization organization(string $login)
  *
- * @see \Astrotomic\GithubSponsors\Factory
+ * @see Factory
  */
 class GithubSponsors extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Astrotomic\GithubSponsors\Factory::class;
+        return Factory::class;
     }
 }
