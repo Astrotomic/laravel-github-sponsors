@@ -87,13 +87,21 @@ it('checks if someone is a sponsor of authenticated user', function () {
         ->toBeTrue();
 });
 
-it('checks if someone is a sponsor of an user')
-    ->expect(fn () => GithubSponsors::user('Gummibeer')->isSponsoredBy('mertasan'))
-    ->toBeTrue();
+it('checks if someone is a sponsor of a user', function () {
+    expect($firstSponsor = GithubSponsors::user('Gummibeer')->sponsors()->first())
+        ->toBeArray()
+        ->not->toBeEmpty()
+        ->and(GithubSponsors::user('Gummibeer')->isSponsoredBy($firstSponsor['login']))
+        ->toBeTrue();
+});
 
-it('checks if someone is a sponsor of an organization')
-    ->expect(fn () => GithubSponsors::organization('larabelles')->isSponsoredBy('laravel'))
-    ->toBeTrue();
+it('checks if someone is a sponsor of an organization', function () {
+    expect($firstSponsor = GithubSponsors::organization('larabelles')->sponsors()->first())
+        ->toBeArray()
+        ->not->toBeEmpty()
+        ->and(GithubSponsors::organization('larabelles')->isSponsoredBy($firstSponsor['login']))
+        ->toBeTrue();
+});
 
 it('checks if someone is a sponsor of a given login', function () {
     expect($firstSponsor = GithubSponsors::user('Gummibeer')->sponsors()->first())
